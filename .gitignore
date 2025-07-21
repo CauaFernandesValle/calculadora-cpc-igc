@@ -1,7 +1,0 @@
-# Arquivos compilados e executáveis
-*.o
-*.exe
-calculadora_igc
-
-# Pastas de IDE
-.vscode/
