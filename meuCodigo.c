@@ -35,7 +35,7 @@ int main ()
 	TCurso *listaDeCursos;
 
 	//chama a função que printa todos os cursos e seus parametros cadastrados
-	printCursos("cursos.txt");
+	printCursos("../cursos.txt");
 
 	//pergunta se você gostaria de adicionar um cursos
 	printf("\n\ngostaria de adicionar um curso? (S/N) ");
@@ -44,14 +44,14 @@ int main ()
 	scanf(" %c", &confirmacao);
 	confirmacao = toupper(confirmacao);
 	
-	//se o usuario respondeu que sim, ele chama a função de adicionar curso
+	//se o usuario respondeu quxe sim, ele chama a função de adicionar curso
 	if(confirmacao == 'S'){
 		printf("\n");
-		adicionarCurso("cursos.txt");
+		adicionarCurso("../cursos.txt");
 	}
 
 	//chama a função que conta a quantidade de linhas no arquivo e a armazena
-	quantLinhas = contLinha("cursos.txt");
+	quantLinhas = contLinha("../cursos.txt");
 	
 	//usa a locação dinamica pra declarar agora o tamanho da array de structs baseado na quantidade de linhas que tem no arquivo txt
 	listaDeCursos = (TCurso*)malloc(sizeof(TCurso) * quantLinhas);
@@ -72,13 +72,13 @@ int main ()
 	//se o usuario respondeu que sim, printa na tela os cursos novamente
 	if(confirmacao == 'S'){
 		printf("\n");
-		printCursos("cursos.txt");
+		printCursos("../cursos.txt");
 		
 	}
 
 	
 	//chama a função que armazena as informações de cada curso numa struct
-	armazenaCursosNoStruct("cursos.txt", quantLinhas, listaDeCursos);
+	armazenaCursosNoStruct("../cursos.txt", quantLinhas, listaDeCursos);
 
 	//chama a função que calcula os CPCs e a satisfação
 	calculaCPC(quantLinhas, listaDeCursos);
@@ -446,19 +446,19 @@ void printCPC(int tamanhoStru, TCurso listaDeCursos[]){
 
 void printFaixa(int tamanhoStru, TCurso listaDeCursos[]){
 
-	int i, j, cont = 0;
+	int i, j, cont;
 
 	for(i=1;i<=5;i++){
 
 
 		printf("\nos cursos da faixa %d sao: ", i);
 
+		cont = 0;	
+
 		//um for que percorre os structs
 		for(j=0;j<tamanhoStru;j++){
 
-			cont = 0;
-
-			//se o igc faixa do estruct[j] for igual a faixa pedida pelo usuario, printa ocodigo do curso, uma '|' e incrementa um contador
+			//se o igc faixa do estruct[j] for igual a faixa atual, printa o codigo do curso, uma '|' e incrementa um contador
 			if(listaDeCursos[j].faixa == i){
 				printf("%d | ", listaDeCursos[j].codigoCur);
 				cont++;
