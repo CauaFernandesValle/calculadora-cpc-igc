@@ -1,75 +1,39 @@
-O Ministério da Educação, através do Exame
-Nacional de Desempenho dos Estudantes
-(ENADE), promove avaliação dos cursos de
-graduação ofertados pelas diversas Instituições de
-Ensino Superior brasileiras.
-Esses resultados, combinados com outras
-variáveis, permitem ao MEC avaliar a qualidade
-destes cursos, assim como das instituições que o
-promovem.
-Dessa forma, a cada curso de graduação avaliado
-pelo ENADE, é atribuído um conceito denominado
-Conceito Preliminar de Curso (CPC), na faixa de 1
-(qualidade baixa) a 5 (ótima qualidade). Para se
-chegar a este conceito, é necessária uma média
-ponderada de diversos insumos que são
-apresentados na tabela abaixo, juntamente com
-os seus pesos:
+Calculadora de CPC e IGC em Linguagem C
+Projeto acadêmico para a disciplina de Fundamentos de Programação
+Este repositório contém o código-fonte de uma aplicação de console desenvolvida em Linguagem C. O objetivo do programa é calcular o Conceito Preliminar de Curso (CPC) para múltiplos cursos e o Índice Geral de Cursos (IGC) para uma instituição de ensino, com base em dados de entrada fornecidos através de um arquivo de texto.
 
-Insumo Contribuição
-Nota ENADE 20%
-IDD 35 %
-Doutores 15 %
-Mestres 7,5 %
-Regime de Trabalho 7,5 %
+O projeto demonstra a aplicação de conceitos fundamentais da programação estruturada, incluindo manipulação de arquivos, alocação dinâmica de memória e utilização de structs para a organização de dados complexos.
 
-Organização Didático-
-pedagógica 7,5 %
+Funcionalidades
+Leitura de Dados Estruturados: O programa realiza a leitura de dados de um arquivo (cursos.txt) e os armazena em um vetor de structs alocado dinamicamente, onde cada elemento representa um curso.
 
-Infraestrutura 5 %
-Oportunidades de Ampliação
-Acadêmica e Profissional 2,5%
-Depois de calculado o CPC contínuo através
-dessa média, é necessário determinar o CPC faixa
-a partir do seguinte mapeamento:
-CPC contínuo CPC faixa
-CPC < 0,945 1
-0,945  CPC < 1,945 2
-1,945  CPC < 2,945 3
-2,945  CPC < 3,945 4
-CPC  3,945 5
-Cursos com CPC faixa inferiores a 3 são
-considerados de qualidade abaixo da média
-nacional (CPC insatisfatório).
+Entrada de Dados Interativa: Oferece ao usuário a opção de adicionar novos registros de cursos ao arquivo de dados em tempo de execução.
 
-Pede-se o desenvolvimento de uma aplicação em
-C que obtenha de um arquivo texto as
-informações dos diversos cursos de determinada
-instituição. Para isto, cada linha do arquivo reunirá
-as informações de um curso da instituição,
-representadas por uma string (iniciada pelo código
-do curso e com o número de alunos matriculados
-como último dado da sequência), como no
-exemplo abaixo:
-Mesma ordem apresentada na tabela
-1234|3.45|2.87|1.98|4.05|2.50|1.34|1.76|2.32|258
-Todos os dados do arquivo devem ser lidos para
-um vetor de structs, cada posição com os insumos
-de um curso da instituição.
-O programa deve permitir que o usuário opte pela
-inclusão de novo(s) curso(s) no vetor ou processar
-os seus dados. Neste último caso, deve exibir as
-seguintes informações:
-1) Para cada curso: código, CPC contínuo, CPC
-faixa e a classificação deste (satisfatório ou
-insatisfatório);
-2) Para cada CPC faixa possível, exibir os cursos
-que o obteve;
-3) O IGC – Índice Geral de Cursos – da
-instituição, contínuo e faixa (baseados na
-mesma tabela de mapeamento apresentada
-para o CPC), considerando que este é obtido a
-partir de uma média ponderada de todos os
-CPCs, onde o número de alunos matriculados
-no curso representará o peso de seu CPC no
-cálculo do IGC.
+Cálculo de CPC: Para cada curso processado, o sistema calcula os seguintes indicadores:
+
+CPC Contínuo: Média ponderada de oito indicadores de qualidade.
+
+CPC Faixa: Valor discreto de 1 a 5, mapeado a partir do CPC Contínuo.
+
+Classificação de Satisfação: Determina se o curso é "Satisfatório" ou "Insatisfatório" com base no seu CPC Faixa.
+
+Cálculo de IGC: Processa os dados de todos os cursos para obter o índice geral da instituição:
+
+IGC Contínuo: Média dos CPCs contínuos, ponderada pelo número de alunos em cada curso.
+
+IGC Faixa: Classificação da instituição de 1 a 5, baseada no IGC Contínuo.
+
+Geração de Relatórios: Exibe os resultados de forma organizada no console:
+
+Um relatório individual para cada curso com seu código, CPC Contínuo, CPC Faixa e classificação.
+
+Um relatório que agrupa e lista os cursos de acordo com cada uma das cinco faixas de CPC.
+
+Um relatório final apresentando o IGC Contínuo e o IGC Faixa da instituição.
+
+Tecnologias Utilizadas
+Linguagem C
+
+Bibliotecas Padrão: stdio.h, stdlib.h, ctype.h
+
+Técnicas Aplicadas: manipulação de arquivos, ponteiros e structs.
