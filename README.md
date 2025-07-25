@@ -37,3 +37,13 @@ Linguagem C
 Bibliotecas Padrão: stdio.h, stdlib.h, ctype.h
 
 Técnicas Aplicadas: manipulação de arquivos, ponteiros e structs.
+
+Formato do Arquivo de Entrada (cursos.txt)
+O programa requer que cada linha do arquivo cursos.txt represente um curso, com os dados separados pelo caractere pipe (|).
+
+Ordem dos campos:
+codigo do curso|nota enade|idd|doutores|mestres|regime de trabalho|organização didático-pedagógica|infraestrutura|oportunidades de ampliação acadêmica e profissional|quantidade de alunos do curso
+
+Exemplo de uma linha válida:
+
+1234|3.45|2.87|1.98|4.05|2.50|1.34|1.76|2.32|258
