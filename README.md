@@ -1,5 +1,7 @@
 Calculadora de CPC e IGC em Linguagem C
+
 Projeto acadêmico para a disciplina de Fundamentos de Programação
+
 Este repositório contém o código-fonte de uma aplicação de console desenvolvida em Linguagem C. O objetivo do programa é calcular o Conceito Preliminar de Curso (CPC) para múltiplos cursos e o Índice Geral de Cursos (IGC) para uma instituição de ensino, com base em dados de entrada fornecidos através de um arquivo de texto.
 
 O projeto demonstra a aplicação de conceitos fundamentais da programação estruturada, incluindo manipulação de arquivos, alocação dinâmica de memória e utilização de structs para a organização de dados complexos.
